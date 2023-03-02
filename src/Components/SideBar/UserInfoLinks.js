@@ -36,11 +36,9 @@ const UserInfoLinks = () => {
   return (
     <div className="userInfoLinksRoot">
       {routes?.map((item, index) => (
-        <div  key={index}>
+        <div key={index}>
           <FavoriteIcon />
-          <Link to={item?.pathname}>
-            {item?.name}
-          </Link>
+          <Link to={item?.pathname}>{item?.name}</Link>
         </div>
       ))}
     </div>
