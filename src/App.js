@@ -1,13 +1,13 @@
 import { BrowserRouter, Route, Routes } from "react-router-dom";
 import "./App.css";
-import SideBar from "./Components/SideBar/SideBar";
+import SideBarMain from "./Components/SideBar/SideBarMain";
 import ProfileInfoPage from "./Components/ProfileInfo/Pages/ProfileInfoPage";
 
 function App() {
   return (
     <BrowserRouter>
       <div className="layout">
-        <SideBar />
+        <SideBarMain />
         <Routes>
           <Route path="/" element={<ProfileInfoPage />} />
         </Routes>
