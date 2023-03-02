@@ -56,7 +56,8 @@ body {
 }
 
 .userInfoLinksRoot div:hover {
-  background-color: #adfd68;
+  background-color: #3c6321;
+  color: white;
 }
 
 .userInfoLinksRoot div svg {
@@ -78,7 +79,7 @@ body {
 .editProfileInfoRoot {
   display: flex;
   flex-direction: column;
-  gap: 1rem;
+  gap: 1.5rem;
 }
 
 input[type="radio"] {
@@ -120,6 +121,16 @@ input[type="text"]:focus {
   box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
   list-style-type: none;
 }
-ul li{
+
+ul li {
   word-wrap: break-word;
+}
+
+.editProfileInfoRoot button {
+  background-color: #3c6321;
+  color: white;
+  padding: 1rem;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
 }

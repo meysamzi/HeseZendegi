@@ -1,41 +1,19 @@
 import { Link } from "react-router-dom";
 import FavoriteIcon from "@mui/icons-material/Favorite";
+import { useEffect, useState } from "react";
 
 const UserInfoLinks = () => {
-  const routes = [
-    {
-      pathname: "/",
-      name: "اطلاعت پروفایل",
-    },
-    {
-      pathname: "/",
-      name: "اطلاعت پروفایل",
-    },
-    {
-      pathname: "/",
-      name: "اطلاعت پروفایل",
-    },
-    {
-      pathname: "/",
-      name: "اطلاعت پروفایل",
-    },
-    {
-      pathname: "/",
-      name: "اطلاعت پروفایل",
-    },
-    {
-      pathname: "/",
-      name: "اطلاعت پروفایل",
-    },
-    {
-      pathname: "/",
-      name: "اطلاعت پروفایل",
-    },
-  ];
+  const [routes, setRoutes] = useState([]);
+
+  useEffect(() => {
+    fetch("dictionary.json")
+      .then((response) => response.json())
+      .then((data) => setRoutes(data));
+  }, []);
 
   return (
     <div className="userInfoLinksRoot">
-      {routes?.map((item, index) => (
+      {routes[0]?.links?.map((item, index) => (
         <div key={index}>
           <FavoriteIcon />
           <Link to={item?.pathname}>{item?.name}</Link>
